@@ -1,0 +1,5 @@
+<ul>
+    {% for product_type in product_types %}
+    <li><a href="{{ product_type.get_absolute_url }}">{{ product_type.name }}</a></li>
+    {% endfor %}
+</ul>
