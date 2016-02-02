@@ -1,0 +1,7 @@
+<h3 class="poll poll-results question">{{ question }}</h3>
+<ul>
+    {% for choice in choices %}
+    <li class="choice"><span class="votes">{{ choice.votes }}</span> {{ choice.choice_text }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'polls:detail' question.id %}">Cast your vote!</a>
