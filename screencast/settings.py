@@ -166,6 +166,8 @@ INSTALLED_APPS = (
 
     'screencast',
     'screencast.addons.products',
+
+    'polls',
 )
 
 LANGUAGES = (
