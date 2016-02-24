@@ -1,7 +1,0 @@
-{% load cms_tags staticfiles %}
-
-{% if property_name == "photo" %}
-    {% render_model_block product %}<img class="img-responsive" src="/media/{{ product.photo.file }}">{% endrender_model_block %}
-{% else %}
-    {% render_model product property_name %}
-{% endif %}

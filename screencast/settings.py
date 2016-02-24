@@ -169,7 +169,6 @@ INSTALLED_APPS = (
     # -- Product specific
 
     'screencast',
-    'screencast.addons.products',
 
     'polls',
 )
