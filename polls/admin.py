@@ -19,17 +19,9 @@ class QuestionAdmin(admin.ModelAdmin):
     inlines = [ChoiceInline, ]
 
     fieldsets = [
-        (
-            None, {
-                'fields': ['question_text']
-            }
-        ),
-        (
-            'Date information', {
-                'fields': ['pub_date'],
-                'classes': ['collapse']
-            },
-        ),
+        (None,               {'fields':  ['question_text']}),
+        ('Date information', {'fields':  ['pub_date'],
+                              'classes': ['collapse']}, ),
     ]
 
 admin.site.register(Question, QuestionAdmin)

@@ -22,7 +22,7 @@
 <div class="poll poll-results">
     <h3 class="question">{{ question }}</h3>
     <ul>
-        {% for choice in choices %}
+        {% for choice in choice_set %}
         <li class="choice"><span class="votes" style="width: {{ choice.pct }}%">{{ choice.votes }} </span><span class="choice-text">{{ choice.choice_text }}</span></li>
         {% endfor %}
     </ul>

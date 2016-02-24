@@ -42,7 +42,7 @@ class PollResultsPlugin(CMSPluginBase):
             context, instance, placeholder)
         context['question'] = instance.question
         context['total_votes'] = instance.total_votes
-        context['choices'] = instance.question.choices.order_by(
+        context['choice_set'] = instance.question.choice_set.order_by(
             *instance.ordering.split(',')).annotate(
             pct=100.0 * F('votes') / instance.total_votes)
         return context
