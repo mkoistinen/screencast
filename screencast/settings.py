@@ -28,6 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
 
 # Application definition
 
@@ -88,6 +91,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'screencast', 'templates'),],
         'OPTIONS': {
+            'debug': DEBUG,
             'context_processors': [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -165,7 +169,8 @@ INSTALLED_APPS = (
     # -- Product specific
 
     'screencast',
-    'screencast.addons.products',
+
+    'polls',
 )
 
 LANGUAGES = (

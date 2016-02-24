@@ -1,0 +1,29 @@
+<style>
+    .poll-results ul { list-style-type: none; padding: 0; margin: 0; }
+    .poll-results ul li {
+        background: hsla(204, 50%, 50%, .1);
+        margin: 1px 0;
+        padding: 1px 2px;
+        position: relative;
+    }
+    .poll-results ul li .votes {
+        position: absolute;
+        background: hsla(204, 50%, 50%, .3);
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        color: transparent;
+        display: block;
+    }
+    .poll-results ul li .choice-text {
+        display: block;
+        padding: 0 5px;
+    }
+</style>
+<div class="poll poll-results">
+    <h3 class="question">{{ question }}</h3>
+    <ul>
+        {% for choice in choice_set %}
+        <li class="choice"><span class="votes" style="width: {{ choice.pct }}%">{{ choice.votes }} </span><span class="choice-text">{{ choice.choice_text }}</span></li>
+        {% endfor %}
+    </ul>
+<a href="{% url 'polls:detail' question.id %}">Cast your vote!</a></div>
