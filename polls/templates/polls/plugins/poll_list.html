@@ -1,5 +1,5 @@
 <ul class="polls question-list">
-{% for question in question_list %}
+{% for question in polls.all %}
     <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
 {% endfor %}
 </ul>
